@@ -1,8 +1,9 @@
 # Run config for experiment 0028 (muteval on 0016).
 # Identical to ../0016-promptfoo-eval/promptfooconfig.yaml except the provider:
-# gpt-4o-mini instead of vertex:claude-sonnet-4-6, because muteval calls the
-# model through an OpenAI-compatible API. Prompt and test cases are unchanged
-# and read from 0016 so the fixture is not duplicated.
+# gpt-4o-mini instead of vertex:claude-sonnet-4-6, because an OpenAI key was what
+# was available. The prompt is read from 0016; the test cases are copied from it
+# unchanged. muteval reads the provider's model name only: it calls the model at
+# temperature 0 itself, so the `config:` block below has no effect under it.
 
 description: "PR Scope Classifier - Golden Set Evaluation"
 
